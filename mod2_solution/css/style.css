@@ -1,0 +1,94 @@
+/********** Base styles **********/
+* {
+    box-sizing: border-box;
+}
+h1 {
+    margin: 1em auto;
+    text-align: center;
+}
+
+p {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: Helvetica;
+    padding-top: 1em;
+    clear: both;
+    text-align: justify;
+}
+
+/* Simple Responsive Framework. */
+
+.grid {
+    display: grid;
+}
+
+.cell {
+    border: 3px solid black;
+    margin: 1em;
+    background: #999999;
+}
+
+
+/* Titles */
+.title {
+    float: right;
+    position: relative;
+    top: -3px;
+    right: -3px;
+    text-align: center;
+    width: 8em;
+    margin: 0;
+    border: 3px solid black;
+}
+
+.grid .cell:nth-child(1) .title {
+    background: #d59898;
+    color: black;
+}
+
+.grid .cell:nth-child(2) .title {
+    background: #c14543;
+    color: white;
+}
+
+.grid .cell:nth-child(3) .title {
+    background: #e5d198;
+    color: black;
+}
+
+
+/********** Large devices only **********/
+@media (min-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(3, auto);
+        grid-template-row: repeat(1, auto);
+    }
+}
+
+/********** Medium devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+    .grid {
+        grid-template-columns: repeat(2, auto);
+        grid-template-row: repeat(2, auto);
+    }
+    .grid .cell:nth-child(1) {
+    }
+
+    .grid .cell:nth-child(2) {
+    }
+
+    .grid .cell:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+}
+
+/********** Medium devices only **********/
+@media (max-width: 767px) {
+    .grid {
+        grid-template-columns: repeat(1, auto);
+        grid-template-row: repeat(3, auto);
+    }
+}
