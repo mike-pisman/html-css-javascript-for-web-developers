@@ -24,7 +24,7 @@ p {
 }
 
 .cell {
-    border: 3px solid black;
+    border: 1px solid black;
     margin: 1em;
     background: #999999;
 }
@@ -34,12 +34,12 @@ p {
 .title {
     float: right;
     position: relative;
-    top: -3px;
-    right: -3px;
+    top: -1px;
+    right: -1px;
     text-align: center;
     width: 8em;
     margin: 0;
-    border: 3px solid black;
+    border: 1px solid black;
 }
 
 .grid .cell:nth-child(1) .title {
